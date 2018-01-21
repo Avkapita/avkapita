@@ -1,0 +1,307 @@
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+ul, h2{
+	margin: 0;
+	padding: 0;
+}
+
+
+.points ul {
+	display: block;
+	position: fixed;
+	top: 90px;
+	right: 50px; 
+	color: white;
+	list-style: none;
+}
+
+.points li {
+	
+}
+
+
+.points .active {
+	display:block;
+	width: 10px;
+	height: 10px;
+	border: 2px solid white;
+	border-radius: 50%;
+	list-style: none;
+}
+
+
+.container {
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    align-content: center; 
+    justify-content: center; 
+    overflow: auto;
+}
+
+.first_screen {
+	background-image: url(img/screen1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+header {
+	margin: 10px auto;
+	display: flex;
+}
+
+.logo {
+	width: 90px;
+	height: 75px;
+	flex-grow: 1;
+}
+
+.nav_menu {
+	color: white;
+	flex-grow: 2;
+}
+
+.nav_menu li {
+	float: left;
+	padding: 10px;
+	margin: 0 10px;
+	font-size: 13px;
+	font-family: Ubuntu Medium, sans-serif;
+	color: #fff;
+}
+
+.nav_menu li:first-child {
+	list-style: none;
+}
+
+.nav_menu li:last-child {
+	list-style: none;
+}
+
+.nav_menu li a{
+	display: block;
+}
+
+.order {
+	background-color: #e45028;
+	border-radius: 15%;
+}
+
+
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+.content_item {
+	flex-grow: 1;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+}
+
+ .burger1 {
+	background: url(icons/drops.svg) 45% 35%;
+	background-repeat: no-repeat;
+	padding: 20px;
+}
+
+.burger1 img {
+	
+	
+}
+
+
+.slogan {
+	color: f9b43b;
+	font-family: Gagalin, sans-serif;
+	font-size: 72px;
+	flex-wrap: wrap;
+}
+
+.slogan span {
+	color: #fff;
+	font-family: Lifehack, sans-serif;
+	font-size: 65px;
+}
+
+
+.arrow_scroll {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+.second_screen {
+	background-image: url(img/screen2.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	max-height: 100%;
+}
+
+ .second_screen .content {
+ 	padding: 10px;
+ 	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+
+}
+
+.we_best {
+	font-family: Gagalin, sans-serif;
+	font-size: 72px;
+	padding-top:  100px;
+	padding-bottom: 30px;
+}
+
+.best_list ul {
+	list-style: none;
+	display: flex;
+	margin: 30px;
+}
+
+.best_item {
+	width: 33%;
+	display: flex;
+	flex-direction: column; 
+	margin: 20px;
+	padding-bottom: 130px;
+}
+
+
+.best_item img {
+
+}
+
+.item_caption {
+	font-size: 24px;
+	font-family: Lifehack, sans-serif;
+	padding: 35px 0 20px 0;
+	color: #2f3234;
+}
+
+
+.item_text {
+	text-align: justify;
+	font-size: 14px;
+	font-family: Ubuntu, sans-serif;
+	color: #838281;
+}
+
+
+
+
+
+.third_section {
+	background-color: #f9b43b;
+	background-size: cover;
+}
+ 
+ .third_section .container{
+ 	display: flex;
+ 	flex-direction: row;
+ }
+
+.third_section .container :before {
+	content: ""
+}
+
+
+.third_section .container :after {
+
+}
+
+
+.burger_photo {
+	flex-grow: 1;
+}
+
+.burger_description {
+flex-grow: 1;
+}
+
+h2 {
+	font-family: Gagalin, sans-serif;
+	font-size: 72px;
+}
+
+
+/*-------------------section6----------------*/
+
+.reviews {
+	width: 100%;
+	height: 100%;
+    background-size: cover;
+}
+
+.photo_list ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.photo_list li {
+	width: 25%;
+	position: relative;
+	display: flex;
+}
+.photo_list li img {
+	width: 100%;
+	max-height: 100%;
+}
+
+.photo_list li:hover {
+  opacity: 0.5;
+}
+
+.photo_content {
+	position: absolute;
+	margin: 20px;
+	font-size: 14px;
+	color: #fff;
+	display: none;
+}
+
+.hover {
+	display: block;
+}
+
+.photo_name {
+	margin: 30px 0;
+	font-family: Gagalin, sans-serif;
+}
+
+.photo_text {
+	margin-bottom: 15px;
+	font-family: Ubuntu Light, sans-serif;
+}
+
+.photo_more {
+	display: block;
+	width: 80px;
+	margin-bottom: 25px;
+	padding: 10px 15px;
+	background-color: #2f3234;
+	border-radius: 10px;
+	font-family: Ubuntu Light, sans-serif;
+}
