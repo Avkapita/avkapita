@@ -1,0 +1,36 @@
+.points {
+	position: fixed;
+	top: 90px;
+	right: 50px; 
+}
+
+.points__item {
+	margin:10px;
+}
+
+.points__item__link {
+		position: relative;
+		display: block;
+		width: 5px;
+		height: 5px;
+		background-color: #fff;
+		border: 1px solid transparent;
+		border-radius: 50%;
+		}
+
+.points__item__link .active {
+   			border-color: #fff;
+  			}
+
+  			
+.points__item__link .active :after {
+  			content: "";
+    		display: block;
+    		width: 6px;
+   			height: 6px;
+   			border-radius: 50%;
+    		position: absolute;
+    		top: 50%;
+    		left: 50%;
+   }
+

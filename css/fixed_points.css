@@ -1,0 +1,25 @@
+.points {
+  position: fixed;
+  top: 90px;
+  right: 50px;
+  list-style: none; }
+
+.points_item_link {
+  content: "";
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  width: 15px;
+  height: 15px; }
+  .points_item_link:after {
+    width: 10px;
+    height: 10px;
+    display: none; }
+
+.points_item_link--active {
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #fff;
+  border-radius: 50%; }

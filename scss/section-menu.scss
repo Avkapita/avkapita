@@ -1,0 +1,35 @@
+.section-menu {
+	width: 100vw;
+	height: 100vh;
+	background: url() no-repeat;
+	background-size: cover;
+	display: flex;
+}
+
+.section-menu h1 {
+	color: #fff;
+	margin: 40px 20px;
+	font-family: Gagalin, sans-serif;
+	font-size: 72px;
+	text-transform: uppercase;
+}
+
+.burger-menu {
+	display: flex;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #2f3234;
+	opacity: 0.9;
+
+}
+
+.burger-menu_item {
+	width: 0;
+	overflow: hidden;
+}
+
+.burger-menu_item--active {
+	display: flex;
+
+}

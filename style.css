@@ -1,13 +1,15 @@
-a {
-	text-decoration: none;
-	color: #fff;
-}
+ 
 
-ul, h2{
-	margin: 0;
-	padding: 0;
-}
-
+/*.wrapper {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+}*/
 
 .points ul {
 	display: block;
@@ -18,9 +20,7 @@ ul, h2{
 	list-style: none;
 }
 
-.points li {
-	
-}
+
 
 
 .points .active {
@@ -32,6 +32,12 @@ ul, h2{
 	list-style: none;
 }
 
+.wrapper {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
 
 .container {
 	display: flex;
@@ -40,17 +46,20 @@ ul, h2{
     align-content: center; 
     justify-content: center; 
     overflow: auto;
+    height: 100vh;
 }
 
-.first_screen {
+.burger-section {
+	width: 100vw;
+	height: 100vh;
 	background-image: url(img/screen1.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-header {
-	margin: 10px auto;
+.header {
 	display: flex;
+
 }
 
 .logo {
@@ -59,77 +68,98 @@ header {
 	flex-grow: 1;
 }
 
-.nav_menu {
+.nav-menu {
 	color: white;
 	flex-grow: 2;
+
 }
 
-.nav_menu li {
-	float: left;
+.nav-list {
+	display: flex;
+	flex-direction: row;
+}
+
+
+.nav_item {
+	display: flex;
 	padding: 10px;
 	margin: 0 10px;
 	font-size: 13px;
 	font-family: Ubuntu Medium, sans-serif;
 	color: #fff;
+	text-transform: uppercase;
 }
 
-.nav_menu li:first-child {
+.nav_item:first-child {
 	list-style: none;
 }
 
-.nav_menu li:last-child {
+.nav_item:last-child {
 	list-style: none;
 }
 
-.nav_menu li a{
+.nav_item a{
 	display: block;
+	text-decoration: none;
+	color: #fff;
 }
 
-.order {
-	background-color: #e45028;
+.nav_item--order {
+	position: relative;
+    display: inline-block;
+    height: 2.5em;
+    line-height: 2.5em;
+    background-color: #e45028;
 	border-radius: 15%;
+    min-width: 90px;
+    padding: 0 0.5em;
+    border-radius: .6em;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    background-size: auto 250%;
+    background-position: 0 0;
+    -webkit-transition: background-position .5s;
+    transition: background-position .5s;
+    text-decoration: none;
 }
 
 
-.content {
+.burger-section-content {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
 }
 
-.content_item {
+.burger-section-content_pic {
 	flex-grow: 1;
 	justify-content: center;
 	align-items: center;
 	margin: 10px;
 	padding: 10px;
 	text-align: center;
-}
-
- .burger1 {
 	background: url(icons/drops.svg) 45% 35%;
 	background-repeat: no-repeat;
 	padding: 20px;
 }
 
-.burger1 img {
-	
-	
-}
 
-
-.slogan {
+.title {
 	color: f9b43b;
 	font-family: Gagalin, sans-serif;
 	font-size: 72px;
 	flex-wrap: wrap;
 }
 
-.slogan span {
+.title span {
 	color: #fff;
 	font-family: Lifehack, sans-serif;
 	font-size: 65px;
+	text-transform: lowercase;
 }
 
 
@@ -137,8 +167,8 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: row;
-	padding-bottom: 20px;
+	position: absolute;
+	bottom: 20px;
 }
 
 
@@ -148,39 +178,27 @@ header {
 
 
 
-.second_screen {
+.we_are_best {
+	width: 100vw;
+	height: 100vh;
 	background-image: url(img/screen2.png);
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
-	max-height: 100%;
+	background-position: center;				
 }
 
- .second_screen .content {
- 	padding: 10px;
- 	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	text-align: center;
+.best {
 
 }
 
-.we_best {
-	font-family: Gagalin, sans-serif;
-	font-size: 72px;
-	padding-top:  100px;
-	padding-bottom: 30px;
-}
-
-.best_list ul {
+.best_list {
 	list-style: none;
 	display: flex;
+	flex-direction: row;
 	margin: 30px;
 }
 
 .best_item {
-	width: 33%;
 	display: flex;
 	flex-direction: column; 
 	margin: 20px;
@@ -188,11 +206,11 @@ header {
 }
 
 
-.best_item img {
+.best_pic {
 
 }
 
-.item_caption {
+.best_title {
 	font-size: 24px;
 	font-family: Lifehack, sans-serif;
 	padding: 35px 0 20px 0;
@@ -200,7 +218,7 @@ header {
 }
 
 
-.item_text {
+.best_about {
 	text-align: justify;
 	font-size: 14px;
 	font-family: Ubuntu, sans-serif;
@@ -208,8 +226,8 @@ header {
 }
 
 
-
-
+/*------------third section----------*/
+/*
 
 .third_section {
 	background-color: #f9b43b;
@@ -239,17 +257,135 @@ header {
 flex-grow: 1;
 }
 
-h2 {
+*/
+
+
+
+
+/*-----------------------team section---------------------*/
+
+.team_section{
+	width: 100vw;
+	height: 100vh;
+	background: url(img/team_bg.jpg) no-repeat;
+	background-size: cover;
+	height: 100%; 
+	display: flex;
+	justify-content: flex-end;
+	color: #fff;
+}
+
+
+.team_content{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	background-color: #2f3234;
+	opacity: 0.9;
+	height: 100%;
+}
+
+
+.team_caption{
+	color: #f9b43b;
 	font-family: Gagalin, sans-serif;
 	font-size: 72px;
+
+}
+
+.team_accordeon{
+
+}
+
+.team_accordeon_list{
+	list-style: none;
+}
+
+.team_accordeon_item {
+	padding-left: 40px;
+}
+
+.team_accordeon_item .active{
+
+}
+
+.team_accordeon_item_caption {
+	font-family: Gagalin, sans-serif;
+	font-size: 14px;
+}
+
+.team_accordeon_item_content {
+	height: 0;
+	overflow: hidden;
+}
+
+.team_accordeon_item_content img {
+
+}
+
+.job_position {
+	font-family: Ubuntu Bold, sans-serif;
+	font-size: 14px;
+}
+
+.team_accordeon_item_about {
+	font-family: Ubuntu Light, sans-serif;
+	font-size: 14px;
+}
+
+.team_accordeon_item .active .team_accordeon_item_caption{
+	color: #f9b43b;
+
+}
+
+.team_accordeon_item .active .team_accordeon_item_content {
+	height: 140px;
+}
+
+/*-------------section-menu----------*/
+
+.section-menu {
+	width: 100vw;
+	height: 100vh;
+	background: url() no-repeat;
+	background-size: cover;
+	display: flex;
+}
+
+.section-menu h2 {
+	color: #fff;
+	margin: 40px 20px;
+	font-family: Gagalin, sans-serif;
+	font-size: 72px;
+	text-transform: uppercase;
+}
+
+.burger-menu {
+	display: flex;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #2f3234;
+	opacity: 0.9;
+
+}
+
+.burger-menu_item {
+	width: 0;
+	overflow: hidden;
+}
+
+.burger-menu_item--active {
+	display: flex;
+
 }
 
 
 /*-------------------section6----------------*/
 
 .reviews {
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
     background-size: cover;
 }
 
@@ -305,3 +441,186 @@ h2 {
 	border-radius: 10px;
 	font-family: Ubuntu Light, sans-serif;
 }
+
+
+
+/*------------contacts----------------*/
+
+.contacts {
+	width: 100vw;
+	height: 100vh;
+    background-size: cover;
+}
+
+.map img{
+	width: 100vw;
+	height: 100vh;
+}
+
+
+.footer {
+	display: flex;
+	position: absolute;
+	top: -40px;
+	width: 100vw;
+	background-color: black;
+}
+
+
+
+
+/*
+btn{
+	position: relative;
+    display: inline-block;
+    height: 2.5em;
+    line-height: 2.5em;
+    min-width: 110px;
+    padding: 0 1em;
+    border-radius: .6em;
+    font-family: inherit;
+    font-size: calc(14px + 2 * ((100vw - 420px) / 860));
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#ff5236),color-stop(#ff3f3a),color-stop(#ff3f3a),to(#ff5236));
+    background-image: linear-gradient(#ff5236,#ff3f3a,#ff3f3a,#ff5236);
+    background-size: auto 250%;
+    background-position: 0 0;
+    -webkit-transition: background-position .5s;
+    transition: background-position .5s;
+    text-decoration: none;
+
+
+
+element.style {
+    overflow: visible;
+}
+styles.bundle.b…c770c52d.css:1
+body {
+    position: relative;
+    font-family: OpenSansLoft,"sans-serif";
+    font-size: 16px;
+    font-weight: 400;
+    font-range: 320px 2000px;
+    line-height: 1.5em;
+    color: #313640;
+}
+
+}
+@media only screen and (min-width: 640px)
+<style>…</style>
+.header[data-v-d4b87db8] {
+    height: 72px;
+}
+<style>…</style>
+.header[data-v-d4b87db8] {
+    position: fixed;
+    z-index: 2;
+    height: 42px;
+    min-width: 320px;
+    background-color: #fff;
+    border-bottom: 1px solid #f5f5f5;
+    width: 100%;
+    top: 0;
+    -webkit-transition: top 1s;
+    transition: top 1s;
+
+}
+
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 100%;
+
+
+    leftside{
+    	    padding-left: 30px;
+    border-right: 1px solid #f5f5f5;
+    width: 100%;
+    >a logo-link  {logo-link[data-v-d4b87db8] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+
+    >div logo-img{width: ,height}
+        width: 165px;
+    height: 28px;
+    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' ….437 0-.744.121-.924.365-.179.244-.268.581-.268 1.011v.168z'/%3E%3C/svg%3E);
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+
+
+
+nav-list
+nav-item
+        display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+
+
+
+   стрелка вверх вниз 
+   <style>…</style>
+.nav-item.is-toggle[data-v-d4b87db8]:after {
+    content: "";
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 5px 5px 0;
+    border-top-color: #6f809a;
+    margin-left: 5px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: -webkit-transform .5s ease 0s;
+    transition: -webkit-transform .5s ease 0s;
+    transition: transform .5s ease 0s;
+    transition: transform .5s ease 0s,-webkit-transform .5s ease 0s;
+
+
+
+    navigation>nav-list>nav-item is-toggle is-active {
+    	    /* position: relative; */
+    /* -webkit-box-align: center; *
+    -ms-flex-align: center;
+    /* align-items: center; */
+    /* margin-right: 30px; */
+    /* cursor: pointer; */
+
+/*
+выпадающее меню .menu-list.for-professions[data-v-326d180c] {
+    right: -66px;
+}
+<style>…</style>
+.menu-list.is-visible[data-v-326d180c] {
+    opacity: 1;
+}
+<style>…</style>
+.menu-list[data-v-326d180c] {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    padding: 10px 0;
+    border-top: 4px solid #6f809a;
+    -webkit-box-shadow: 0 10px 13px rgba(38,55,66,.2);
+    box-shadow: 0 10px 13px rgba(38,55,66,.2);
+    background-color: #fff;
+    opacity: 0;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    }

@@ -1,0 +1,125 @@
+.slider-section {
+	background-color: $yellow;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+}
+
+.arrow-contain{
+	height: 100%;
+	width: 7%;
+	text-align: center;
+	position: relative;
+}
+
+.arrow-left {
+	display: block;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	background: url(../img/icons/arrow-scroll.svg) center center no-repeat;
+	transform: rotate(90deg);
+}
+
+.arrow-right {
+	display: block;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	background: url(../img/icons/arrow-scroll.svg) center center no-repeat;
+	transform: rotate(-90deg);
+}
+
+.slider {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	width: 960px;
+  	overflow: hidden;
+}
+
+.slider-items {
+	display: flex;
+	position: relative;
+	will-change: right;
+	transition: right 0.3s;
+}
+
+.slider-item{
+	width: 960px;
+	display: flex;
+	flex-direction: row;
+}
+
+.slider-pic {
+	display: flex;
+	width:50%;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.slider-pic__img {
+	width: 250px;
+	height: 250px;
+}
+
+.ingredients{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 0;
+	left: 0;
+	background: url(../img/icons/burger.svg) center center no-repeat;
+}
+
+.kkal {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	font-family: Gagalin,sans-serif;
+	font-size: 20px;
+}
+
+.kkal-pic {	
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	left: 0;
+	bottom: 0;
+	background: url(../img/icons/kkal.svg) 10% 10% no-repeat;
+}
+
+
+.section-title--white {
+	color: #fff;
+}
+
+.slider-content {
+	width:50%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.slider__text {
+	margin: 10px;
+}
+
+.slider_order {
+	display: flex;
+	flex-direction: row;
+}
+
+.slider__price {
+	width: 50%;
+	text-transform: uppercase;
+	font-family: Gagalin, sans-serif;
+	font-size: 72px;
+	color: $red;
+}
+

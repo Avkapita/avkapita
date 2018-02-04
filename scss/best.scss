@@ -1,0 +1,38 @@
+.best {
+	background: url(../img/bg/we-best.jpg) center center no-repeat;
+	background-size: cover;	
+	text-align: center;	
+	align-items: center;		
+}
+
+.best-list {
+	display: flex;
+	align-content: space-between;
+	margin-top: 60px;
+}
+
+.best__item {
+	display: flex;
+	flex-direction: column; 
+	width: 33%;
+}
+
+.best__pic {
+	width:100px;
+	height:90px;
+}
+
+.best__title {
+	font-size: 24px;
+	font-family: Lifehack, sans-serif;
+	color: $black;
+	margin: 0 20px;
+}
+
+
+.best__about {
+	margin-top:10px;
+	text-align: center;
+	color: $black;
+	font-family: 'Ubuntu Light', sans-serif;
+}

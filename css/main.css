@@ -1,0 +1,211 @@
+@import url(normalize.css);
+@font-face { font-family: 'Ubuntu'; src: url("./fonts/Ubuntu/Ubuntu-Medium.woff2") format("woff2"), url("./fonts/Ubuntu/Ubuntu-Medium.woff") format("woff"); font-weight: 500; font-style: normal; }
+
+@font-face { font-family: 'Ubuntu'; src: url("./fonts/Ubuntu/Ubuntu.woff2") format("woff2"), url("./fonts/Ubuntu/Ubuntu.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Ubuntu'; src: url("./fonts/Ubuntu/Ubuntu-Bold.woff2") format("woff2"), url("./fonts/Ubuntu/Ubuntu-Bold.woff") format("woff"); font-weight: bold; font-style: normal; }
+
+@font-face { font-family: 'Ubuntu'; src: url("./fonts/Ubuntu/Ubuntu-Light.woff2") format("woff2"), url("./fonts/Ubuntu/Ubuntu-Light.woff") format("woff"); font-weight: 300; font-style: normal; }
+
+@font-face { font-family: 'Gagalin'; src: url("./fonts/Gagalin/Gagalin-Regular.woff2") format("woff2"), url("./fonts/Gagalin/Gagalin-Regular.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Lifehack'; src: url("./fonts/Lifehack/Lifehack-Medium.woff2") format("woff2"), url("./fonts/Lifehack/Lifehack-Medium.woff") format("woff"); font-weight: 500; font-style: normal; }
+
+html, body { height: 100%; }
+
+body { font-size: 14px; line-height: 1.42; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; position: relative; font-family: "Ubuntu Light", sans-serif; color: #fff; }
+
+.wrapper { position: relative; width: 100%; min-width: 960px; min-height: 100%; overflow: hidden; }
+
+.container { margin: 0 auto; position: relative; width: 940px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; font-weight: normal; }
+
+ul { padding: 0; margin: 0; }
+
+ul li { list-style: none; }
+
+footer { position: relative; width: 100%; }
+
+* { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+a { text-decoration: none; color: #fff; }
+
+.section { min-height: 650px; display: -webkit-box; display: -ms-flexbox; display: flex; width: 100vw; height: 100vh; }
+
+.section-title { font-size: 72px; font-family: Gagalin, sans-serif; /*@include gagalin();*/ color: #e4a536; }
+
+.section-title__black { color: #2f3234; }
+
+.section-title__centered { text-align: center; }
+
+.btn { background-color: #e35028; padding: 8px 12px; border-radius: 5px; color: #fff; font-size: 13px; text-decoration: none; text-transform: uppercase; font-family: Ubuntu Medium, sans-serif; }
+
+/*.btn {
+	background: $orange;
+	font-size: rem(13px);
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	border-radius: rem(5px);
+	padding: rem(9px) rem(16px);
+	@include ubuntu(medium);
+}*/
+.burger-section { background: url(../img/bg/screen1.jpg) center center no-repeat; background-size: cover; }
+
+.header { display: -webkit-box; display: -ms-flexbox; display: flex; margin: 10px 0; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-align: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.logo__pic { width: 90px; height: 75px; }
+
+.nav { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; text-transform: uppercase; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-align: center; margin-left: 20px; }
+
+.nav-list { display: -webkit-box; display: -ms-flexbox; display: flex; list-style: disc; }
+
+.nav__item { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin: 0 10px; font-size: 13px; font-family: Ubuntu Medium, sans-serif; }
+
+.nav__item:after { content: ""; width: 5px; height: 5px; background-color: #fff; border-radius: 50%; }
+
+.nav__link { padding-right: 20px; }
+
+.burger-section__content { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+
+.burger__pic { display: -webkit-box; display: -ms-flexbox; display: flex; width: 50%; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.burger__desc { width: 50%; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+.section-title-add { font-family: Lifehack, sans-serif; font-size: 65px; text-transform: lowercase; }
+
+.arrow { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: absolute; bottom: 20px; }
+
+.best { background: url(../img/bg/we-best.jpg) center center no-repeat; background-size: cover; text-align: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.best-list { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-line-pack: justify; align-content: space-between; margin-top: 60px; }
+
+.best__item { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 33%; }
+
+.best__pic { width: 100px; height: 90px; }
+
+.best__title { font-size: 24px; font-family: Lifehack, sans-serif; color: #2f3234; margin: 0 20px; }
+
+.best__about { margin-top: 10px; text-align: center; color: #2f3234; font-family: 'Ubuntu Light', sans-serif; }
+
+.team-section { background: url(../img/bg/team_bg.jpg) center center no-repeat; background-size: cover; position: relative; }
+
+.team-content { position: absolute; top: 0; right: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; background-color: #2f3234; opacity: 0.9; height: 100%; width: 48%; }
+
+.team-text { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; margin: 40px; }
+
+.team-acc__list { list-style: none; }
+
+.team-acc__item { padding-left: 20px; position: relative; margin-bottom: 10px; }
+
+.team-acc__trigger { font-family: Gagalin, sans-serif; font-size: 14px; cursor: pointer; }
+
+.team-acc__trigger:before { content: ""; position: absolute; left: 5px; top: 5px; border: 5px solid transparent; border-top: 5px solid #e4a536; }
+
+.team-acc__content { height: 0; overflow: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-line-pack: justify; align-content: space-between; margin-top: 20px; }
+
+.team-acc__pic { width: 35%; background: url(../img/content/rjames.jpg) center center no-repeat; background-size: cover; border: 1px solid #2f3234; border-radius: 50%; }
+
+.team-acc__text { width: 65%; padding: 20px; }
+
+.team__position { display: -webkit-box; display: -ms-flexbox; display: flex; font-family: "Ubuntu Bold", sans-serif; font-size: 14px; margin-bottom: 10px; font-weight: bold; }
+
+.team-acc__desc { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+.team-acc__item--selected .team-acc__trigger { color: #e4a536; }
+
+.team-acc__item--selected .team-acc__content { min-height: 140px; }
+
+.team-acc__item--selected .team-acc__trigger:before { content: ""; position: absolute; left: 5px; top: 5px; border: 5px solid transparent; border-bottom: 5px solid #e4a536; }
+
+.section-menu { width: 100vw; height: 100vh; background: url() no-repeat; background-size: cover; display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.section-menu h1 { color: #fff; margin: 40px 20px; font-family: Gagalin, sans-serif; font-size: 72px; text-transform: uppercase; }
+
+.burger-menu { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; top: 0; right: 0; background-color: #2f3234; opacity: 0.9; }
+
+.burger-menu_item { width: 0; overflow: hidden; }
+
+.burger-menu_item--active { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.reviews .section-title { display: none; }
+
+.reviews { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+
+.reviews__list { width: 100%; height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; }
+
+.reviews__item { width: 25%; height: 50%; -webkit-filter: grayscale(100%); filter: grayscale(100%); position: relative; background-size: cover; background-position: center center; background-repeat: no-repeat; }
+
+.reviews__item:hover .reviews-content { opacity: 1; }
+
+.reviews-content { position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0; background: rgba(20, 20, 20, 0.7); -webkit-transition: .3s; -o-transition: .3s; transition: .3s; }
+
+.reviews__name { margin: 40px 15px; font-family: Gagalin, sans-serif; }
+
+.reviews__text { margin: 15px; font-family: Ubuntu Light, sans-serif; }
+
+.reviews__more { margin: 15px; font-size: 13px; font-family: Ubuntu Medium, sans-serif; }
+
+.reviews__more { position: relative; display: inline-block; margin: 15px; padding: 5px; height: 30px; background-color: #e45028; border-radius: 30%; min-width: 90px; }
+
+.section-order { background: url(../img/bg/order_bg.jpg) center center no-repeat; background-size: cover; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.form__input { border: none; border-radius: 5px; padding: 5px; width: 100%; }
+
+.form__row { display: -webkit-box; display: -ms-flexbox; display: flex; margin-bottom: 20px; }
+
+.form__block { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; margin-right: 20px; }
+
+.form__block:last-child { margin-right: 0; }
+
+.contacts { width: 100vw; height: 100vh; background-size: cover; }
+
+.map img { width: 100vw; height: 100vh; }
+
+.footer { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; top: -40px; width: 100vw; background-color: black; }
+
+.points { position: fixed; top: 90px; right: 50px; }
+
+.points__item { margin: 10px; }
+
+.points__item__link { position: relative; display: block; width: 5px; height: 5px; background-color: #fff; border: 1px solid transparent; border-radius: 50%; }
+
+.points__item__link .active { border-color: #fff; }
+
+.points__item__link .active :after { content: ""; display: block; width: 6px; height: 6px; border-radius: 50%; position: absolute; top: 50%; left: 50%; }
+
+.slider-section { background-color: #e4a536; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+
+.arrow-contain { height: 100%; width: 7%; text-align: center; position: relative; }
+
+.arrow-left { display: block; width: 50px; height: 50px; position: absolute; top: 50%; background: url(../img/icons/arrow-scroll.svg) center center no-repeat; -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); }
+
+.arrow-right { display: block; width: 50px; height: 50px; position: absolute; top: 50%; background: url(../img/icons/arrow-scroll.svg) center center no-repeat; -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg); }
+
+.slider { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; width: 960px; overflow: hidden; }
+
+.slider-items { display: -webkit-box; display: -ms-flexbox; display: flex; position: relative; will-change: right; -webkit-transition: right 0.3s; -o-transition: right 0.3s; transition: right 0.3s; }
+
+.slider-item { width: 960px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+
+.slider-pic { display: -webkit-box; display: -ms-flexbox; display: flex; width: 50%; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; }
+
+.slider-pic__img { width: 250px; height: 250px; }
+
+.ingredients { position: absolute; width: 40px; height: 40px; top: 0; left: 0; background: url(../img/icons/burger.svg) center center no-repeat; }
+
+.kkal { position: absolute; left: 0; bottom: 0; font-family: Gagalin,sans-serif; font-size: 20px; }
+
+.kkal-pic { position: absolute; width: 60px; height: 60px; left: 0; bottom: 0; background: url(../img/icons/kkal.svg) 10% 10% no-repeat; }
+
+.section-title--white { color: #fff; }
+
+.slider-content { width: 50%; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+.slider__text { margin: 10px; }
+
+.slider_order { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+
+.slider__price { width: 50%; text-transform: uppercase; font-family: Gagalin, sans-serif; font-size: 72px; color: #e35028; }

@@ -1,0 +1,105 @@
+.team-section{
+	background: url(../img/bg/team_bg.jpg) center center no-repeat;
+	background-size: cover; 
+	position: relative;
+}
+
+
+.team-content{
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	background-color: #2f3234;
+	opacity: 0.9;
+	height: 100%;
+	width: 48%;
+}
+
+.team-text {
+	display: flex;
+	flex-direction: column;
+	margin: 40px; 
+
+}
+.team-acc__list{
+	list-style: none;
+}
+
+.team-acc__item {
+	padding-left: 20px;
+	position: relative;
+	margin-bottom:  10px;
+}
+
+.team-acc__trigger {
+	font-family: Gagalin, sans-serif;
+	font-size: 14px;
+	cursor: pointer;
+}	
+
+.team-acc__trigger:before {
+	content: "";
+	position: absolute;
+	left: 5px; top: 5px;
+	border: 5px solid transparent;	
+	border-top: 5px solid $yellow;
+}
+
+.team-acc__content {
+	height: 0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	align-content: space-between;
+	margin-top: 20px;
+}
+
+.team-acc__pic{
+	width: 35%;
+	background: url(../img/content/rjames.jpg) center center no-repeat;
+	background-size: cover;
+	border: 1px solid #2f3234;
+	border-radius: 50%;
+}
+
+.team-acc__text {
+	width: 65%;
+	padding: 20px;
+}
+
+.team__position {
+	display: flex;
+	font-family: "Ubuntu Bold", sans-serif;
+	font-size: 14px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.team-acc__desc {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.team-acc__item--selected {
+
+	.team-acc__trigger{
+	color: $yellow;
+	}
+
+	.team-acc__content {
+	min-height: 140px;
+	}
+	
+	.team-acc__trigger:before {
+	content: "";
+	position: absolute;
+	left: 5px; top: 5px;
+	border: 5px solid transparent;	
+	border-bottom: 5px solid $yellow;
+}
+
+}
+
+

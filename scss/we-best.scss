@@ -1,0 +1,43 @@
+.we-best {
+	width: 100vw;
+	height: 100vh;
+	background: url(img/bg/we-best.jpg) center center no-repeat;
+	background-size: cover;	
+	text-align: center;	
+	display: flex;
+	align-items: center;		
+}
+
+.best-list {
+	display: flex;
+	align-content: space-between;
+}
+
+.best__item {
+	display: flex;
+	flex-direction: column; 
+	margin: 35px;
+	width: 280px;
+}
+
+.best__pic{
+	width: 90%;
+  	height: rem(100px);
+  	svg {
+    max-width: 95%;
+  }
+}
+
+
+.best__title {
+	font-size: 24px;
+	font-family: Lifehack, sans-serif;
+	color: $black;
+	margin: 0 20px;
+}
+
+
+.best__about {
+	text-align: center;
+	color: #black;
+}
