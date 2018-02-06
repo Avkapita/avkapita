@@ -9,28 +9,25 @@
 	position: absolute;
 	top: 0;
 	right: 0;
+	bottom: 0;
+	width: 50%;
 	display: flex;
-	flex-direction: column;
-	background-color: #2f3234;
-	opacity: 0.9;
-	height: 100%;
-	width: 48%;
-}
-
-.team-text {
-	display: flex;
-	flex-direction: column;
-	margin: 40px; 
+	background: rgba($black, .93);
+	align-items: center;
+	justify-content: center;
 
 }
-.team-acc__list{
-	list-style: none;
+
+.team-acc__container {
+	flex-direction: column;
+	width: 70%;
+
 }
 
 .team-acc__item {
 	padding-left: 20px;
 	position: relative;
-	margin-bottom:  10px;
+	margin-bottom:  35px;
 }
 
 .team-acc__trigger {
@@ -41,45 +38,14 @@
 
 .team-acc__trigger:before {
 	content: "";
-	position: absolute;
-	left: 5px; top: 5px;
-	border: 5px solid transparent;	
-	border-top: 5px solid $yellow;
-}
-
-.team-acc__content {
+	display: block;
+	width: 0;
 	height: 0;
-	overflow: hidden;
-	display: flex;
-	flex-direction: row;
-	align-content: space-between;
-	margin-top: 20px;
-}
-
-.team-acc__pic{
-	width: 35%;
-	background: url(../img/content/rjames.jpg) center center no-repeat;
-	background-size: cover;
-	border: 1px solid #2f3234;
-	border-radius: 50%;
-}
-
-.team-acc__text {
-	width: 65%;
-	padding: 20px;
-}
-
-.team__position {
-	display: flex;
-	font-family: "Ubuntu Bold", sans-serif;
-	font-size: 14px;
-	margin-bottom: 10px;
-	font-weight: bold;
-}
-
-.team-acc__desc {
-	display: flex;
-	flex-wrap: wrap;
+	position: absolute;
+	left: 2px; 
+	top: 7px;
+	border: 7px solid transparent;	
+	border-top: 7px solid $yellow;
 }
 
 .team-acc__item--selected {
@@ -95,11 +61,40 @@
 	.team-acc__trigger:before {
 	content: "";
 	position: absolute;
-	left: 5px; top: 5px;
-	border: 5px solid transparent;	
-	border-bottom: 5px solid $yellow;
+	left: 2px; 
+	top: 2px;
+	border: 7px solid transparent;	
+	border-bottom: 7px solid $yellow;
 }
 
 }
+.team-acc__content {
+	height: 0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	align-content: space-between;
+	padding-top: 20px;
+}
 
+.team-acc__pic{
+	width: 35%;
+	background: url(../img/content/rjames.jpg) center center no-repeat;
+	background-size: cover;
+	border: 1px solid #2f3234;
+	border-radius: 50%;
+}
 
+.team-acc__text {
+	width: 65%;
+	padding-left: 20px;
+}
+
+.team__position {
+	font-family: "Ubuntu Bold", sans-serif;
+	padding-bottom: 15px;
+}
+
+.team-acc__desc {
+	font-family: "Ubuntu Light", sans-serif;
+}
