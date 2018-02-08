@@ -105,6 +105,11 @@
 	width:50%;
 	justify-content: center;
 	align-items: center;
+
+	@include tablets {
+		width: 80%;
+		text-align: center;
+	}
 }
 
 .burger__pic-img {
@@ -116,6 +121,11 @@
 	width:50%;
 	display: flex;
 	flex-wrap: wrap;
+
+	@include tablets {
+		width: 80%;
+		text-align: center;
+	}
 }
 
 .section-title-add {

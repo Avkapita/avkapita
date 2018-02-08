@@ -27,7 +27,12 @@
 		.reviews-content {
 			opacity:1;
 			}
-		}			;
+		}			
+
+		@include tablets {
+			width: 50%;
+			height: 25%;
+		}
   
 }
 
