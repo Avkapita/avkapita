@@ -4,7 +4,7 @@ const items = document.querySelector("#items");
 
 const minRight = 0;
 const maxRight = 5000;
-const step = 500;
+const step = 960;
 let currentRight = 0;
 
 right.addEventListener("click", function(e) {
@@ -22,3 +22,4 @@ left.addEventListener("click", function(e) {
     items.style.right = currentRight + "px";
   }
 });
+  

@@ -15,9 +15,7 @@ adjustments of font size after orientation changes in
 
 html {
   line-height: 1.15; /* 1 */
-  -ms-text-size-
-
-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
@@ -431,14 +429,12 @@ sizing in IE 10-.
   padding: 0; /* 2 */
 }
 
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
+/*
+Correct the cursor style of increment and decrement buttons in Chrome.
  */
 
 [type="number"]::-webkit-inner-spin-button,
-[type="number"]::-
-
-webkit-outer-spin-button {
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -465,14 +461,12 @@ Chrome and Safari on macOS.
 none;
 }
 
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
+/*
+  1. Correct the inability to style clickable types in iOS and Safari.
+  2. Change font properties to `inherit` in Safari.
  */
 
-::-
-
-webkit-file-upload-button {
+::-webkit-file-upload-button {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }

@@ -26,7 +26,12 @@
 }
 .nav-list {
 	display: flex;
-	list-style: disc;
+
+	@include tablets() {
+		display: none;
+	}
+
+
 }
 
 .nav__item {
@@ -51,7 +56,33 @@
 	padding-right: 20px;
 }
 
+.hamburger-menu-link {
+	vertical-align: middle;
+	position: relative;
+	height: rem(22px);
+	align-items: center;
+	margin-left: rem(30px);
+	display: none;
 
+	@include tablets {
+		display: flex;
+	}
+}
+
+.hamburger-menu-link_bars {
+	&, &:before, &:after {
+		background: #fff;
+		width: rem(24px);
+		height: rem(5px);
+		border-radius: rem(3px);
+		}
+
+		&:before, &:after {
+			content: "";
+			display: block;
+			position: absolute;
+		}
+}
 
 
 
@@ -63,6 +94,10 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
+
+	@include tablets {
+		flex-direction: column;
+	}
 }
 
 .burger__pic {
@@ -70,6 +105,11 @@
 	width:50%;
 	justify-content: center;
 	align-items: center;
+}
+
+.burger__pic-img {
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .burger__desc{
@@ -90,4 +130,8 @@
 	align-items: center;
 	position: absolute;
 	bottom: 20px;
+
+	@include tablets {
+		align-self: center;
+	}
 }

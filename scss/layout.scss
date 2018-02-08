@@ -1,21 +1,30 @@
+html {
+	@include tablets {
+		font-size: 13px;
+	}
+
+	@include phones {
+		font-size: 12px;
+	}
+}
+
 html, body {
 	height: 100%;
 }
 
 body {
-	font-size: 14px;
+	font-size: 1rem;
 	line-height: 1.42;
 	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 	position: relative;
- 	font-family: "Ubuntu Light", sans-serif;
+ 	font-family: "Ubuntu Light", Helvetica, sans-serif;
  	color: #fff;
 }
 
 .wrapper {
 	position: relative;
 	width: 100%;
-	min-width: 940px+20px;
 	min-height: 100%;
 	overflow: hidden;
 }
@@ -23,10 +32,15 @@ body {
 .container {
 	margin: 0 auto;
 	position: relative;
-	width: 940px;
+	max-width: 940px;
+	width: 95%;
 	display: flex;
 	flex-direction: column;
 	align-items:center;
+
+	@include tablets {
+		align-items: stretch;
+	}
 }
 
 h1,
@@ -47,11 +61,6 @@ ul {
 	li {
 		list-style: none;
 	}
-}
-
-footer {
-	position: relative;
-	width: 100%;
 }
 
 * {
@@ -77,12 +86,16 @@ a {
   margin-bottom: 45px;
 
     &__black {
-      color: $black;
+    	color: $black;
     }
 
 
-  &__centered {
-      text-align: center;
+ 	&__centered {
+    	text-align: center;
+    }
+
+    &__white {
+    	color: #fff;
     }
 }
 

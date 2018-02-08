@@ -1,19 +1,44 @@
 .contacts {
-	width: 100vw;
-	height: 100vh;
     background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.map img{
-	width: 100vw;
-	height: 100vh;
+.map{
+
+}
+
+.map_pic{
+
 }
 
 
 .footer {
+	position: relative;
 	display: flex;
-	position: absolute;
-	top: -40px;
-	width: 100vw;
-	background-color: black;
+	flex-direction: row;
+	background-color: $black;
+	height: 100px;
+}
+
+.footer-left {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 40px;
+}
+
+.adress, .tel  {
+
+}
+
+
+.tel  {
+	color: $redred;
+}
+
+.footer-right {
+	width: 50%;
 }
