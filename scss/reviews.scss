@@ -46,33 +46,18 @@
 	opacity: 0;
 	background: rgba(#141414, .7);
 	transition: .3s;
+	padding: 1.25rem;
+
 }
 
 
 .reviews__name {
-	margin: 40px 15px;
+	margin: 1.875rem 0 1.5625rem 0;
 	font-family: Gagalin, sans-serif;
 }
 
 .reviews__text {
-	margin: 15px;
+	margin-bottom: 1.5625rem;
 	font-family: Ubuntu Light, sans-serif;
-}
-
-
-.reviews__more {
-	margin: 15px;
-	font-size: 13px;
-	font-family: Ubuntu Medium, sans-serif;
-}
-
-.reviews__more {
-	position: relative;
-    display: inline-block;
-    margin: 15px;
-	padding: 5px;
-    height: 30px;
-    background-color: $redred;
-	border-radius: 30%;
-    min-width: 90px;
+	line-height: 1.5;
 }

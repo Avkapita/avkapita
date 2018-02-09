@@ -1,0 +1,62 @@
+
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: row;
+	background-color: $black;
+	height: 3.75rem;
+}
+
+.footer-left {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	padding-left: 16%;
+}
+
+.adress, .tel  {
+
+}
+
+
+.tel  {
+	color: $redred;
+}
+
+
+
+.footer-right {
+	width: 50%;
+	padding-right: 5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;	
+}
+
+.social-icons {
+	display: flex;
+	flex-direction: row;
+	vertical-align: top;
+	width: 8.75rem ;
+}
+
+.social-icons__item {
+	width: 1.25rem;
+	margin-right: 1.25rem;
+	height: auto;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+}
+
+
+
+.social-icons__pic {
+	width: 100%;
+}

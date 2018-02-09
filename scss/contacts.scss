@@ -12,33 +12,3 @@
 .map_pic{
 
 }
-
-
-.footer {
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	background-color: $black;
-	height: 100px;
-}
-
-.footer-left {
-	width: 50%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding-left: 40px;
-}
-
-.adress, .tel  {
-
-}
-
-
-.tel  {
-	color: $redred;
-}
-
-.footer-right {
-	width: 50%;
-}

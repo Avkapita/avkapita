@@ -1,35 +1,83 @@
 .section-menu {
-	width: 100vw;
-	height: 100vh;
-	background: url() no-repeat;
+	background: url(../img/content/menu_bg.jpg) no-repeat center center;
 	background-size: cover;
 	display: flex;
+	position: relative;
+	width: 100vw;
 }
 
-.section-menu h1 {
-	color: #fff;
-	margin: 40px 20px;
-	font-family: Gagalin, sans-serif;
-	font-size: 72px;
-	text-transform: uppercase;
+.section-menu  .section-title{
+	position: absolute;
+	top: 6.875rem;
+	left: 5.9375rem;
 }
 
-.burger-menu {
+.acc-menu-list {
 	display: flex;
 	position: absolute;
 	top: 0;
-	right: 0;
-	background-color: #2f3234;
-	opacity: 0.9;
-
+	right: 0.625rem;
+	bottom: 0;
 }
 
-.burger-menu_item {
+.acc-menu_item {
+	width: 5rem;
+	display: flex;
+	flex-direction: row;
+}
+
+
+.acc-menu__trigger {
+	display: inline-block;
+	position: relative;
+	width: 5rem;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position:  center center;
+	background-size: cover;
+	
+}
+
+.acc-menu__trigger-text {
+	bottom: 2.5rem;
+	position: absolute;
+	text-transform: uppercase;
+	white-space: nowrap;
+	font-size: 2.5rem;
+	font-family: Gagalin, Helvetica, sans-serif;
+	color: #fff;
+	left: 50%;
+	transform: rotate(-90deg);
+	transform-origin: 0;
+}
+
+.acc-menu_content {
 	width: 0;
 	overflow: hidden;
 }
 
-.burger-menu_item--active {
+.acc-menu_item--active {
+	width: 38.75rem;
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-size: cover;
 	display: flex;
+	flex-direction: row;
+
+	.acc-menu__trigger {
+		color: $yellow;
+	}
+
+	.acc-menu_content {
+		width: 33.75rem;
+		display: block;
+		height: 100vh;
+		background-color: $black;
+		opacity: 0.9;
+	}
+
+	.acc-menu_text{
+		padding: 1.25rem;
+	}
 
 }

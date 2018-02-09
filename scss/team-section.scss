@@ -28,9 +28,9 @@
 }
 
 .team-acc__item {
-	padding-left: 20px;
+	padding-left: 1.25rem;
 	position: relative;
-	margin-bottom:  35px;
+	margin-bottom:  2.1875rem;
 	display: flex;
 	flex-direction: column;
 		
@@ -52,7 +52,7 @@
 
 .team-acc__trigger {
 	font-family: Gagalin, sans-serif;
-	font-size: 14px;
+	font-size: 0.875rem;
 	cursor: pointer;
 
 	@include tablets {
@@ -66,10 +66,10 @@
 	width: 0;
 	height: 0;
 	position: absolute;
-	left: 2px; 
-	top: 7px;
-	border: 7px solid transparent;	
-	border-top: 7px solid $yellow;
+	left: 0.125rem; 
+	top: 0.4375rem;
+	border: 0.4375rem solid transparent;	
+	border-top: 0.4375rem solid $yellow;
 }
 
 .team-acc__item--selected {
@@ -85,10 +85,10 @@
 	.team-acc__trigger:before {
 	content: "";
 	position: absolute;
-	left: 2px; 
-	top: 2px;
-	border: 7px solid transparent;	
-	border-bottom: 7px solid $yellow;
+	left: 0.125rem; 
+	top: 0.125rem;
+	border: 0.4375rem solid transparent;	
+	border-bottom: 0.4375rem solid $yellow;
 }
 
 }
@@ -98,7 +98,7 @@
 	display: flex;
 	flex-direction: row;
 	align-content: space-between;
-	padding-top: 20px;
+	padding-top: 1.25rem;
 }
 
 .team-acc__pic{
@@ -121,7 +121,7 @@
 
 .team__position {
 	font-family: "Ubuntu Bold", sans-serif;
-	padding-bottom: 15px;
+	padding-bottom: 0.9375rem;
 }
 
 .team-acc__desc {

@@ -14,8 +14,8 @@
 
 .arrow-left {
 	display: block;
-	width: 50px;
-	height: 50px;
+	width: 3.125rem;
+	height: 3.125rem;
 	position: absolute;
 	top: 50%;
 	background: url(../img/icons/arrow-scroll.svg) center center no-repeat;
@@ -24,8 +24,8 @@
 
 .arrow-right {
 	display: block;
-	width: 50px;
-	height: 50px;
+	width: 3.125rem;
+	height: 3.125rem;
 	position: absolute;
 	top: 50%;
 	background: url(../img/icons/arrow-scroll.svg) center center no-repeat;
@@ -36,7 +36,7 @@
 	display: flex;
 	align-items: center;
 	flex-direction: row;
-	width: 960px;
+	width: 60rem;
   	overflow: hidden;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .slider-item{
-	width: 960px;
+	width: 60rem;
 	display: flex;
 	flex-direction: row;
 }
@@ -62,14 +62,14 @@
 }
 
 .slider-pic__img {
-	width: 250px;
-	height: 250px;
+	width: 15.625rem;
+	height: 15.625rem;
 }
 
 .ingredients{
 	position: absolute;
-	width: 40px;
-	height: 40px;
+	width: 2.5rem;
+	height: 2.5rem;
 	top: 0;
 	left: 0;
 	background: url(../img/icons/burger.svg) center center no-repeat;
@@ -80,13 +80,13 @@
 	left: 0;
 	bottom: 0;
 	font-family: Gagalin,sans-serif;
-	font-size: 20px;
+	font-size: 1.25rem;
 }
 
 .kkal-pic {	
 	position: absolute;
-	width: 60px;
-	height: 60px;
+	width: 3.75rem;
+	height: 3.75rem;
 	left: 0;
 	bottom: 0;
 	background: url(../img/icons/kkal.svg) 10% 10% no-repeat;
@@ -105,7 +105,7 @@
 }
 
 .slider__text {
-	margin: 10px;
+	margin: 0.625rem;
 }
 
 .slider_order {
@@ -117,7 +117,7 @@
 	width: 50%;
 	text-transform: uppercase;
 	font-family: Gagalin, sans-serif;
-	font-size: 72px;
+	font-size: 4.5rem;
 	color: $red;
 }
 
