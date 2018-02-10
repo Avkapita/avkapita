@@ -1,5 +1,5 @@
 html {
-  font-size: 14px;
+  font-size: 16px;
 
 	@include tablets {
 		font-size: 13px;
@@ -15,8 +15,8 @@ html, body {
 }
 
 body {
-	font-size: 0.875rem;
-	line-height: 1.15;
+	font-size: 1rem;
+	line-height: 1.42;
 	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 	position: relative;
@@ -115,7 +115,7 @@ a {
 
 .btn {
     background-color: $red;
-    padding:0.5625rem 1rem;
+    padding:9px 16px;
     border-color: transparent;
     border-radius: 0.3125rem;
     color: #fff;

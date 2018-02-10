@@ -8,12 +8,13 @@
 .best-list {
 	display: flex;
 	align-content: space-between;
-	margin-top: 3.75rem;
+
 }
 
 .best__item {
 	display: flex;
-	flex-direction: column; 
+	flex-direction: column;
+	justify-content: space-between; 
 	width: 33%;
 }
 
