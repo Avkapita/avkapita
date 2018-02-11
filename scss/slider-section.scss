@@ -7,8 +7,7 @@
 
 .arrow-contain{
 	height: 100%;
-	width: 7%;
-	text-align: center;
+	width: 5%;
 	position: relative;
 }
 
@@ -18,6 +17,7 @@
 	height: 3.125rem;
 	position: absolute;
 	top: 50%;
+	left: 0;
 	background: url(../img/icons/arrow-scroll.svg) center center no-repeat;
 	transform: rotate(90deg);
 }
@@ -28,19 +28,23 @@
 	height: 3.125rem;
 	position: absolute;
 	top: 50%;
+	right: 0;
 	background: url(../img/icons/arrow-scroll.svg) center center no-repeat;
 	transform: rotate(-90deg);
 }
 
-.slider {
+.slider-container {
 	display: flex;
 	align-items: center;
 	flex-direction: row;
-	width: 60rem;
-  	overflow: hidden;
+	position: relative;
+    width: 84%;
+    margin: 0px auto;
+    overflow: hidden;
+  	
 }
 
-.slider-items {
+.slider {
 	display: flex;
 	position: relative;
 	will-change: right;
@@ -50,8 +54,7 @@
 .slider-item{
 	width: 60rem;
 	display: flex;
-	flex-direction: row;
-}
+	}
 
 .slider-pic {
 	display: flex;
@@ -68,36 +71,42 @@
 
 .ingredients{
 	position: absolute;
-	width: 2.5rem;
-	height: 2.5rem;
+	width: 5.625rem;
+	height: 5.625rem;
 	top: 0;
 	left: 0;
 	background: url(../img/icons/burger.svg) center center no-repeat;
+	background-color: $redred;
+	border-radius: 10px;
+}
+
+.ingr-title {
+	bottom: 0;
+	left: 25%;
+	position: absolute;
+	font-family: Gagalin, sans-serif
 }
 
 .kkal {
 	position: absolute;
+	width: 5.625rem;
+	height: 5.625rem;
 	left: 0;
 	bottom: 0;
-	width: 45px;
-	font-family: Gagalin,sans-serif;
+	background: url(../img/icons/kkal.svg) top center no-repeat;
+	
+}
+
+.kkal-text {	
+	font-family: Gagalin, sans-serif;
 	word-wrap: break-word;
 	font-size: 1.25rem;
-}
-
-.kkal-pic {	
-	position: absolute;
-	width: 3.75rem;
-	height: 3.75rem;
-	left: 0;
-	bottom: 0;
-	background: url(../img/icons/kkal.svg) 10% 10% no-repeat;
+	text-align: center;
+	padding-top: 35px;
 }
 
 
-.section-title--white {
-	color: #fff;
-}
+
 
 .slider-content {
 	width:50%;
@@ -106,20 +115,24 @@
 	flex-direction: column;
 }
 
-.slider__text {
-	margin: 0.625rem;
-}
 
-.slider_order {
-	display: flex;
-	flex-direction: row;
-}
 
-.slider__price {
-	width: 50%;
-	text-transform: uppercase;
-	font-family: Gagalin, sans-serif;
+.slider__order {
 	font-size: 4.5rem;
-	color: $red;
+	font-family: Gagalin, sans-serif;
+	text-transform: uppercase;
+	color: $redred;
+	
+
+
 }
 
+.price-val {
+	font-size: 1.875rem;
+}
+
+
+.slider-section .btn {
+	vertical-align: middle;
+	margin: 1.25rem;
+}

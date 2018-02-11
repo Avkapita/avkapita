@@ -8,12 +8,22 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .form-left, .form-right{
   width: 50%;
   margin-right: 0.625rem;
-  margin-left: 0.625rem; 
+  margin-left: 0.625rem;
+
+  @include tablets {
+    width: 90%;
+
+  }
+
 }
 
 .form__row {
@@ -45,7 +55,7 @@
  
       flex-direction: column;
       align-items: center;
-      width: 65%;
+      
       margin: 0;
     }
 }

@@ -16,7 +16,7 @@ html, body {
 
 body {
 	font-size: 1rem;
-	line-height: 1.42;
+	line-height: 1.15;
 	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 	position: relative;
@@ -38,8 +38,7 @@ body {
 	width: 95%;
 	display: flex;
 	flex-direction: column;
-
-}
+ }
 
 h1,
 h2,
@@ -115,7 +114,7 @@ a {
 
 .btn {
     background-color: $red;
-    padding:9px 16px;
+    padding:0.5625rem 1rem;
     border-color: transparent;
     border-radius: 0.3125rem;
     color: #fff;
@@ -132,6 +131,7 @@ a {
   	}
 
   	&:hover {
+      background-color: $darkred;
   		border-color: $black;
     	}
 }
@@ -174,4 +174,28 @@ a {
 	margin: -0.0625rem;
 	padding: 0;
 	border: 0;
+}
+
+
+button {
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+}
+
+button {
+    background: none;
+    border: 0;
+    outline: none;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+
+    display: flex;
 }

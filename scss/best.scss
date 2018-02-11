@@ -9,6 +9,10 @@
 	display: flex;
 	align-content: space-between;
 
+	@include phones{
+		flex-direction: column;
+	}
+					
 }
 
 .best__item {
@@ -16,6 +20,10 @@
 	flex-direction: column;
 	justify-content: space-between; 
 	width: 33%;
+
+	@include phones {
+		flex-direction: row;
+	}
 }
 
 .best__icon-pic {

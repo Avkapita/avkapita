@@ -47,17 +47,30 @@
 	background: rgba(#141414, .7);
 	transition: .3s;
 	padding: 1.25rem;
-
+		
+		@include tablets {
+			text-align: center;
+		}
 }
 
 
 .reviews__name {
 	margin: 1.875rem 0 1.5625rem 0;
 	font-family: Gagalin, sans-serif;
+
+	@include tablets {
+		margin: 0;
+	}
 }
 
 .reviews__text {
 	margin-bottom: 1.5625rem;
 	font-family: Ubuntu Light, sans-serif;
 	line-height: 1.5;
+
+	@include tablets { 
+		font-size: 0.8125rem;
+		margin-bottom: 0.9375rem;
+		margin-top: 0.9375rem;
+	}
 }

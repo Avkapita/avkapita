@@ -3,7 +3,7 @@ const right = document.querySelector("#right");
 const items = document.querySelector("#items");
 
 const minRight = 0;
-const maxRight = 5000;
+const maxRight = 3840;
 const step = 960;
 let currentRight = 0;
 
@@ -23,3 +23,5 @@ left.addEventListener("click", function(e) {
   }
 });
   
+
+var  ingr = document.querySelector("#ingredients");
