@@ -428,31 +428,33 @@ button { background: none; border: 0; outline: none; color: inherit; font: inher
 
 .points__item .active:before { content: ""; display: block; background-color: transparent; width: 1rem; height: 1rem; border: 0.0625rem solid #fff; border-radius: 50%; position: absolute; -webkit-transform: translate(-35%, -35%); -ms-transform: translate(-35%, -35%); transform: translate(-35%, -35%); }
 
-.slider-section { background-color: #e4a536; -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+.slider-section { background-color: #e4a536; -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; position: relative; }
 
-.arrow-contain { height: 100%; width: 5%; position: relative; }
+.slider { width: 940px; height: 37.5rem; overflow: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; will-change: right; -webkit-transition: right 0.3s; -o-transition: right 0.3s; transition: right 0.3s; }
 
-.arrow-left { display: block; width: 3.125rem; height: 3.125rem; position: absolute; top: 50%; left: 0; background: url(../img/icons/arrow-scroll.svg) center center no-repeat; -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); }
+@media screen and (max-width: 768px) { .slider { max-width: 768px; } }
 
-.arrow-right { display: block; width: 3.125rem; height: 3.125rem; position: absolute; top: 50%; right: 0; background: url(../img/icons/arrow-scroll.svg) center center no-repeat; -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg); }
+.arrow-left { width: 40px; height: 40px; position: absolute; top: 50%; left: 0; background: url(../img/icons/arrow-scroll.svg) center center no-repeat; -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); }
 
-.slider-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; position: relative; width: 84%; margin: 0px auto; overflow: hidden; }
+.arrow-right { display: block; width: 40px; height: 40px; position: absolute; top: 50%; right: 0; background: url(../img/icons/arrow-scroll.svg) center center no-repeat; -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg); }
 
-.slider { display: -webkit-box; display: -ms-flexbox; display: flex; position: relative; will-change: right; -webkit-transition: right 0.3s; -o-transition: right 0.3s; transition: right 0.3s; }
+.slider-list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; position: relative; list-style: none; height: 100%; }
 
-.slider-item { width: 60rem; display: -webkit-box; display: -ms-flexbox; display: flex; }
+.slider-item { width: 940px; height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; padding-left: 50px; padding-right: 50px; }
 
-.slider-pic { display: -webkit-box; display: -ms-flexbox; display: flex; width: 50%; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; }
+@media screen and (max-width: 768px) { .slider-item { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; } }
 
-.slider-pic__img { max-width: 100%; max-height: 100%; }
+.slider-pic { display: -webkit-box; display: -ms-flexbox; display: flex; width: 50%; height: 100%; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; }
 
-.ingredients { position: absolute; width: 5.625rem; height: 5.625rem; top: 0; left: 0; background: url(../img/icons/burger.svg) center center no-repeat; background-color: #e45028; border-radius: 10px; }
+.slider-pic__img { width: 22.5rem; height: auto; }
+
+.ingredients { position: absolute; width: 5.625rem; height: 5.625rem; top: 0; left: 0; background: url(../img/icons/burger.svg) center center no-repeat; background-color: #e45028; border-radius: 0.625rem; }
 
 .ingr-title { bottom: 0; left: 25%; position: absolute; font-family: Gagalin, sans-serif; }
 
 .kkal { position: absolute; width: 5.625rem; height: 5.625rem; left: 0; bottom: 0; background: url(../img/icons/kkal.svg) top center no-repeat; }
 
-.kkal-text { font-family: Gagalin, sans-serif; word-wrap: break-word; font-size: 1.25rem; text-align: center; padding-top: 35px; }
+.kkal-text { font-family: Gagalin, sans-serif; word-wrap: break-word; font-size: 1.25rem; text-align: center; padding-top: 2.1875rem; }
 
 .slider-content { width: 50%; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
