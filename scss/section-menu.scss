@@ -24,6 +24,11 @@
 	width: 5rem;
 	display: flex;
 	flex-direction: row;
+
+
+	@include tablets{
+		 width: 6rem;
+	}
 }
 
 .acc-menu__trigger {
@@ -34,6 +39,9 @@
 	background-repeat: no-repeat;
 	background-position:  center center;
 	background-size: cover;
+	@include tablets{
+		 width: 6rem;
+	}
 	
 }
 
@@ -73,6 +81,9 @@
 		height: 100vh;
 		background-color: $black;
 		opacity: 0.9;
+		z-index: 100;
+
+		
 	}
 
 	.acc-menu__text{

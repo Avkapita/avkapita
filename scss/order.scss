@@ -11,24 +11,29 @@
 
   @include tablets {
     flex-direction: column;
-  }
+    align-items: center;
+   }
 }
 
 .form-left, .form-right{
-  width: 50%;
+  width: 45%;
   margin-right: 0.625rem;
   margin-left: 0.625rem;
 
   @include tablets {
-    width: 90%;
+    width: 70%;
+  }
 
+   @include phones {
+    width: 100%;
+    margin-left: 0;
   }
 
 }
 
 .form__row {
   display: flex;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2.2rem;
   width: 100%;
 }
 

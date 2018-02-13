@@ -18,30 +18,60 @@
 .best__item {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between; 
 	width: 33%;
 
 	@include phones {
+		display: flex;
 		flex-direction: row;
+		width: 90%;
+		margin-top: 50px;
+	
 	}
 }
 
 .best__icon-pic {
 	width:6.25rem;
 	height:5.625rem;
+
+	@include phones {
+		width: 7.25rem;
+		height: 6.625rem;
+	}
+}
+
+.best__icon-pic-meat {
+	fill: #e25028;
+}
+
+.best__icon-pic-natural{
+	fill: #8ac03e;
+}
+
+.best__icon-pic-hand {
+	fill: #f8b43a;
+}
+
+.best__content {
+	text-align: center;
+	margin-top: 20px;
+	
+	@include phones {
+	text-align: left;
+	margin-left: 20px;
+	}
+	
 }
 
 .best__title {
 	font-size: 1.5rem;
 	font-family: Lifehack, sans-serif;
 	color: $black;
-	margin: 0 1.25rem;
 }
 
 
 .best__about {
 	margin-top: 0.625rem;
-	text-align: center;
 	color: $black;
-	font-family: 'Ubuntu Light', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
 }

@@ -33,11 +33,12 @@
 }
 
 @font-face {
-    font-family: 'Gagalin';
-    src: url('../fonts/Gagalin/Gagalin-Regular.woff2') format('woff2'),
-        url('../fonts/Gagalin/Gagalin-Regular.woff') format('woff');
+    font-family: 'gagalinregular';
+    src: url('../fonts/Gagalin/gagalin-regular-webfont.woff2') format('woff2'),
+         url('../fonts/Gagalin/gagalin-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+
 }
 
 @font-face {

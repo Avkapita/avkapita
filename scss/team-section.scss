@@ -31,32 +31,11 @@
 .team-acc {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	
 }
 
-.team-acc__item {
-	margin-bottom:  2.1875rem;
-	display: flex;
-	flex-direction: column;
-		
-		@include tablets {
-		align-items: center;
-	}
-
-
-}
-
-.team-acc__content {
-	height: 0;
-	transition: height 0.4s;
-	overflow: hidden;
-	width: 100%;
-
-	@include tablets {
-		flex-direction: column;
-		align-items: center;
-	}
-}
 
 .team-acc__trigger {
 	font-family: Gagalin, sans-serif;
@@ -68,6 +47,7 @@
 
 	@include tablets {
 		display: inline-block;
+		font-size: 25px;
 	}
 }	
 
@@ -87,12 +67,9 @@
 
 	.team-acc__trigger{
 	color: $yellow;
-	}
+		}
 
-	.team-acc__content {
-	min-height: 8.75rem;
-	}
-	
+
 	.team-acc__trigger:before {
 	content: "";
 	position: absolute;
@@ -102,40 +79,75 @@
 	border-bottom: 0.4375rem solid $yellow;
 }
 
-}
+
 .team-acc__content {
-	height: 0;
-	overflow: hidden;
-	display: flex;
-	flex-direction: row;
-	align-content: space-between;
-	margin-top: 1.25rem;
+	min-height: 200px;
+}
 }
 
-.team-acc__pic{
-	width: 6.25rem;
-	height: 6.25rem;
-	max-width: 35%;
-	overflow:hidden;
+
+.team-acc__item {
+	margin-bottom:  2.1875rem;
 	display: flex;
-	align-items: center;
-	border-radius: 50%;
+	flex-direction: column;
+		
+		@include tablets {
+		align-items: center;
+	}
+
+
+}
+
+.team-acc__content {
+	height: 0;
+	transition: height 0.4s;
+	overflow: hidden;
+	width: 100%;
+	display: flex;
+	margin-top: 2.25rem;
+
+	@include tablets {
+		flex-direction: column;
+		align-items: center;
+		
+	}
+}
+
+
+.team-acc__pic{
+	width: 30%;
+	display: flex;
+	justify-content: center;
+
 }
 
 .team-acc__pic-img {
-	width: 6.25rem;
-	height: 6.25rem;
+	width: rem(100px);
+	height: rem(100px);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-radius: 50%;
 	
 }
 
 .team-acc__text {
 	width: 65%;
 	padding-left: 1.25rem;
+
+
+	@include tablets {
+		text-align: center;
+		margin:  1.25rem;
+	}
 }
 
 .team__position {
-	font-family: "Ubuntu Bold", sans-serif;
-	padding-bottom: 0.9375rem;
+	font-family: "Ubuntu", sans-serif;
+	margin-bottom: 0.9375rem;
+	font-weight: bold;
+
+
 }
 
 .team-acc__desc {
