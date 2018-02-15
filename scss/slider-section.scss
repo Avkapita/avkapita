@@ -1,5 +1,7 @@
 .slider-section {
-	background-color: $yellow;
+	background-image: -moz-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+	background-image: -ms-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
 	align-items: center;
 	display: flex;
 	flex-direction: row;
@@ -53,7 +55,7 @@
 }
 
 .slider-item{
-	width: 940px;
+	width: 58.75rem;
 	height: 100%;
 	display: flex;
 	flex-direction: row;
@@ -64,21 +66,28 @@
 
 	@include tablets {
 		flex-direction: column;
+
 	}
 }
 
 .slider-pic {
 	display: flex;
 	width: 50%;
-	height: 100%;
+	height: 29.6875rem;
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	margin-right: 30px;
+
+	@include tablets {
+		margin: 0;
+		width: 70%;
+	}
 }
 
 .slider-pic__img {
-	width: 22.5rem;
-	height: auto;
+	width: 28.125rem;
+	max-width: 100%;
 }
 
 .ingredients{
@@ -88,12 +97,17 @@
 	top: 0;
 	left: 0;
 	background: url(../img/icons/burger.svg) center center no-repeat;
-	background-color: $redred;
+	background-color: #f08c33;
 	border-radius: 0.625rem;
+	cursor: pointer;
 }
 
+
+
+
+
 .ingr-title {
-	bottom: 0;
+	bottom: 0.3125rem;
 	left: 25%;
 	position: absolute;
 	font-family: Gagalin, sans-serif
@@ -101,11 +115,17 @@
 
 .kkal {
 	position: absolute;
-	width: 5.625rem;
-	height: 5.625rem;
+	width: 60px;
+	height: 80px;
 	left: 0;
 	bottom: 0;
 	background: url(../img/icons/kkal.svg) top center no-repeat;
+
+	@include tablets {
+		top:0;
+		right: 0;
+		left: 30rem;
+	}
 	
 }
 
@@ -114,7 +134,7 @@
 	word-wrap: break-word;
 	font-size: 1.25rem;
 	text-align: center;
-	padding-top: 2.1875rem;
+	padding-top: 40px;
 }
 
 
@@ -125,18 +145,40 @@
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
+	margin: 0 auto;
+
+
+	@include tablets {
+		width: 70%;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+	}
 }
 
+.slider-content .section-title{
+	@include tablets {
+		text-align: center;
 
+	}
+}
+
+.slider__text {
+	@include tablets {
+		width: 100%;
+
+	}
+}
 
 .slider__order {
 	font-size: 4.5rem;
 	font-family: Gagalin, sans-serif;
 	text-transform: uppercase;
 	color: $redred;
-	
 
-
+	@include tablets {
+		width: 100%;
+	}
 }
 
 .price-val {
@@ -147,4 +189,38 @@
 .slider-section .btn {
 	vertical-align: middle;
 	margin: 1.25rem;
+
 }
+
+
+.ingr-modal {
+	position: absolute;
+	top: 0;
+	left: 5.625rem;
+	width: 270px;
+	background-color: #fff;
+	border-radius: 5px;
+ 	padding: 20px;
+	color: $black;
+	opacity: 0;
+	transition: 1s;
+}
+
+.ingr-modal.active{
+	display: flex;
+	flex-direction: column;
+}
+
+.ingr__item {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0;
+	align-items: center;
+
+	}
+
+.ingr__text {
+		text-align: left;
+		font-family: 'Ubuntu',sans-serif;
+		font-weight: 500;
+	}

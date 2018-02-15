@@ -87,3 +87,36 @@
 		display: none;
 	}
 }
+
+
+
+
+.reviews-overlay__content{
+	width: 460px;
+	height: 250px;
+	background: #fff;
+ 	border-radius: 5px;
+ 	padding: 30px 20px;
+	color: $black;
+	display: none;
+ 	
+}
+
+.reviews-overlay__content .active {
+	display: flex;
+}
+
+.reviews-overlay__close{
+	
+color: $red;
+position: absolute;
+right: -5px;
+top: -10px;
+background: #d00;
+border-radius: 50%;
+width: 20px;
+height: 20px;
+line-height: 20px;
+text-align: center;
+text-decoration: none;
+}
