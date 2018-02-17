@@ -15,12 +15,16 @@
 	text-align: center;
 	align-items: center;
 	justify-content: space-between;
-
+	position: relative;
 }
 
 .logo__pic {
 	width: 5.625rem;
 	height: 4.6875rem;
+}
+
+.overlay-logo {
+	z-index: 20000;
 }
 
 .nav {
@@ -29,13 +33,14 @@
 	text-transform: uppercase;
 
 }
+
+
 .nav-list {
 	display: flex;
 
 	@include tablets() {
 		display: none;
 	}
-
 }
 
 .nav__item {
@@ -44,8 +49,8 @@
 	margin-right:0.8125rem;
 	font-size: 0.8125rem;
 	font-family: Ubuntu Medium, sans-serif;
+	position: relative;
 }
-
 
 .nav__item:after {
 	content: "";
@@ -65,6 +70,54 @@
 	padding-right: 0.9375rem;
 }
 
+
+.overlay-nav-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 200px;
+	left:45%;
+	z-index: 20000;
+}
+
+
+.overlay-nav__item{
+	display: flex;
+	align-items: center;
+	margin-right:0.8125rem;
+	position: relative;
+
+}
+
+.overlay-nav__item:after{
+	content: "";
+	width: 0.25rem;
+	height: 0.25rem;
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 100%;
+	left:50%;
+}
+
+
+.overlay-nav__link{
+	padding: 20px 0;
+	font-size: 24px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.overlay-nav__item:last-child:after {
+	content: "";
+	width: 0;
+	height: 0;
+}
+
+
 .btn_container {
 	display: flex;
 	align-items: center;
@@ -76,7 +129,7 @@
 	height: 1.375rem;
 	align-items: center;
 	margin-left: 1.875rem;
-	margin-top: 1.5rem;
+	margin-top: 3%;
 	display: none;
 
 	@include tablets {
@@ -84,7 +137,7 @@
 	}
 }
 
-.hamburger-menu-link_bars {
+.hamburger-menu-link__bars {
 	&, &:before, &:after {
 		background: #fff;
 		width: 1.5rem;

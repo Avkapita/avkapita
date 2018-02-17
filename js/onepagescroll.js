@@ -7,7 +7,7 @@ const mobileDetect = new MobileDetect(window.navigator.userAgent);
 const isMobile = mobileDetect.mobile();
 
 const setActiveMenuItem = itemEq => {
-  $('.fixed-menu__item').eq(itemEq).addClass('active')
+  $('.points__item').eq(itemEq).addClass('active')
     .siblings().removeClass('active')
 } 
 
@@ -86,10 +86,7 @@ $('[data-scroll-to]').on('click', e => {
 if (isMobile) {
   $(document).swipe({
     swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-      /**
-       * плагин возвращает фактическое...
-       * ...
-       */
+
       const scrollDirection = direction === 'down' ? 'up' : 'down';
       
       scrollToSection(scrollDirection);

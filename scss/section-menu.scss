@@ -32,13 +32,15 @@
 }
 
 .acc-menu__trigger {
-	display: inline-block;
+	display: block;
 	position: relative;
 	width: 5rem;
 	height: 100%;
 	background-repeat: no-repeat;
 	background-position:  center center;
 	background-size: cover;
+	text-decoration: none;
+	
 	@include tablets{
 		 width: 6rem;
 	}

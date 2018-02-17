@@ -43,35 +43,6 @@ window.addEventListener('resize', function() {
 
 
 
-///////Slider - ingredients - modal
-var ingredients = document.querySelector('.ingredients'),
-opacity = document.getElementById('ingr-modal').style.opacity,
-opacCount = 0;
-
-
-ingredients.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    if (opacCount < 1 && opacity < 1){
-
-       opacity=1;
-       opacCount++;
-    } 
-    
-
-    else {
-    	opacity=0;
-        opacCount--;
-    }
-
-
-});
-
-
-
-
-
-
  //Contacts-Map
 
 
@@ -109,7 +80,7 @@ myMap.geoObjects.add(myCollection);
 
 
 /////Menu-vertical-accordeon
-
+/*
 var accordion = document.getElementById("menu-accordion"),
     items = accordion.getElementsByClassName("acc-menu__item"),
     contents = accordion.getElementsByClassName("acc-menu__content"),
@@ -117,7 +88,8 @@ var accordion = document.getElementById("menu-accordion"),
      i;
 
 accordion.addEventListener('click', function(e) {
-  if (e.target.classList.contains("acc-menu__trigger") ) {
+  if (e.target.classList.contains("acc-menu__trigger" || 
+    e.target.classList.contains("acc-menu__tr-text")) ) {
     var trigger = e.target;
     var content = trigger.nextElementSibling;
     var item = trigger.parentNode;
@@ -147,7 +119,64 @@ accordion.addEventListener('click', function(e) {
       content.style.offsetWidth = null;
     }
   }
+});*/
+
+
+var accordion = document.getElementById("menu-accordion");
+var i;
+    
+accordion.addEventListener("click", function(e) {
+  var items = accordion.getElementsByClassName("acc-menu__item"),
+    contents = accordion.getElementsByClassName("acc-menu__content");
+  
+  // если кликнули по триггеру или по блоку с текстом внутри него
+  if (e.target.classList.contains("acc-menu__trigger") || e.target.classList.contains("acc-menu__tr-text")) { 
+  
+    var trigger;
+    
+    if (e.target.classList.contains("acc-menu__trigger")) { // если клик по триггеру
+      trigger = e.target;
+    } else { // значит клик был по тексту и триггер это родительский узел блока с текстом
+      trigger = e.target.parentNode;
+    }
+    
+    var content = trigger.nextElementSibling;
+    var item = trigger.parentNode;
+       
+
+    if (!item.classList.contains("active")) { // не активный
+      // удаляем active для всех li
+      for (i = 0; i < items.length; i++) {
+        items[i].classList.remove("active");
+      }
+      // добавляем active для текущего li
+      item.classList.add("active");
+
+      // закрываем все блоки с контентом
+      for (i = 0; i < contents.length; i++) {
+        contents[i].style.width = null;
+      }
+      // открываем текущий блок с контентом
+      content.style.width = content.offsetWidth + "px";
+      
+    } else { // активный
+      // удаляем класс active для текущего li
+      item.classList.remove("active");
+      
+      // закрываем текущий блок с контентом
+      content.style.width = null;
+    }
+  }
 });
+
+
+
+
+
+
+
+
+
 
 
 
