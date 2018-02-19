@@ -62,16 +62,16 @@ openReviewButton.addEventListener("click", function() {
 
 //console.log('in function');
 
-  const overlayRevElement = document.querySelector("reviews overlay");
+  const overlayRevElement = document.querySelector(".review-overlay");
   overlayRevElement.classList.add("active");
     
-  const nameElement = document.querySelector("review-over__name");
+  const nameElement = document.querySelector(".review-over__name");
   nameElement.textContent = document.querySelector(".reviews__name").textContent;
 
   const pointsElement = document.querySelector(".points");
   pointsElement.style.display = "none";
 
-  const closeRevElement = document.querySelector("reviewClose");
+  const closeRevElement = document.querySelector(".reviewClose");
  
   closeRevElement.addEventListener("click", function() {
     overlayRevElement.classList.remove("active");
@@ -80,36 +80,6 @@ openReviewButton.addEventListener("click", function() {
   return overlayRevElement;
 });
 
-
-/*
-  const overReviewElement = document.createElement("div");
-  overReviewElement.classList.add("overlay");
-
-  console.log(overlay);
-
-  const template = document.querySelector("#overlayReviewTemplate");
-  overReviewElement.innerHTML = template.innerHTML; 
-
-   console.log(template);
-
-  const closeElement = overReviewElement.querySelector(".close");
-  closeElement.addEventListener("click", function() {
-    document.body.removeChild(overReviewElement);
-
-     console.log(closeElement);
-  });
-
-  const reviewTextElement = overReviewElement.querySelector(".reviewText");
-  document.body.appendChild(overReviewElement);
-
-console.log(reviewTextElement);
-console.log(overReviewElement);
-  return overReviewElement;
-
-  var reviewText = openReviewButton.previousElementSibling;
-  var reviewName = reviewText.previousElementSibling;
-  console.log (reviewText,reviewName);
-*/
 
 
 
@@ -129,9 +99,9 @@ accordion.addEventListener("click", function(e) {
   
     var trigger;
     
-    if (e.target.classList.contains("acc-menu__trigger")) { // если клик по триггеру
+    if (e.target.classList.contains("acc-menu__trigger")) { 
       trigger = e.target;
-    } else { // значит клик был по тексту и триггер это родительский узел блока с текстом
+    } else { 
       trigger = e.target.parentNode;
     }
     
@@ -139,26 +109,25 @@ accordion.addEventListener("click", function(e) {
     var item = trigger.parentNode;
        
 
-    if (!item.classList.contains("active")) { // не активный
-      // удаляем active для всех li
+    if (!item.classList.contains("active")) { 
+ 
       for (i = 0; i < items.length; i++) {
         items[i].classList.remove("active");
       }
-      // добавляем active для текущего li
+  
       item.classList.add("active");
 
-      // закрываем все блоки с контентом
+      
       for (i = 0; i < contents.length; i++) {
         contents[i].style.width = null;
       }
-      // открываем текущий блок с контентом
+      
       content.style.width = content.offsetWidth + "px";
       
-    } else { // активный
-      // удаляем класс active для текущего li
+    } else { 
+      
       item.classList.remove("active");
       
-      // закрываем текущий блок с контентом
       content.style.width = null;
     }
   }
@@ -179,30 +148,54 @@ accordion2.addEventListener("click", function(e) {
     var content = trigger.nextElementSibling;
     var item = trigger.parentNode;
 
-    if (!item.classList.contains("active")) { // не активный
-      // удаляем active для всех li
+    if (!item.classList.contains("active")) { 
+      
       for (i = 0; i < items2.length; i++) {
         items2[i].classList.remove("active");
       }
-      // добавляем active для текущего li
+     
       item.classList.add("active");
 
-      // закрываем все блоки с контентом
+  
       for (i = 0; i < contents2.length; i++) {
         contents2[i].style.height = null;
       }
-      // открываем текущий блок с контентом
+ 
       content.style.height = content.scrollHeight + "px";
       
-    } else { // активный
-      // удаляем класс active для текущего li
+    } else {
+   
       items2.classList.remove("active");
-      
-      // закрываем текущий блок с контентом
+    
       contents2.style.height = null;
     }
   }
 });
+
+
+
+
+//FORM
+
+const formSubmit = document.querySelector("#form-submit");
+
+formSubmit.addEventListener("click", function() {
+
+  const overlayFormElement = document.querySelector(".overlay-mail");
+  overlayFormElement.classList.add("active");
+
+  const pointsElement = document.querySelector(".points");
+  pointsElement.style.display = "none";
+
+  const closeFormElement = document.querySelector("#form-close");
+
+  closeFormElement.addEventListener("click", function() {
+    overlayFormElement.classList.remove("active");
+  
+  });
+
+});
+
 
 
  //Contacts-Map
@@ -240,10 +233,6 @@ for (var i = 0; i < coords.length; i++) {
 myMap.geoObjects.add(myCollection);
 }
 
-
-
-
-//FORM
 
 
 

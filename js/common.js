@@ -11,9 +11,10 @@
             status = msg.status;
         if (status === 'OK') {
             console.log("!!!!!!");
-            form.append('<p class="success">' + mes + '</p>');
+            form.append('<div class="overlay-mail"><div class="overlay-mail-container"><div class="success-send"><div class="success-send__text">'+mes+'</div><a href="#" id="form-close" class="btn">Закрыть</a></div></div>');
+                        
         } else{
-            form.append('<p class="error">' + mes + '</p>');
+            form.append('<div class="error success-send">' + mes + '</div>');
         }
     });
 

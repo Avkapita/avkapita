@@ -89,6 +89,21 @@
 	}
 }
 
+.review-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2f3234;
+  display: none;
+  z-index: 10000;
+}
+
+.review-overlay.active {
+  display: flex;
+}
+
 .review.overlay-container{
   display: flex;
   justify-content: center;
@@ -111,7 +126,7 @@
 }
 
 .reviewClose{
-	color: #fff;
+	color: gray;
 	position: absolute;
 	right: -5px;
 	top: -10px;

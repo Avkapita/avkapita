@@ -211,39 +211,4 @@ button {
 }
 
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #2f3234;
-  display: none;
-  z-index: 10000;
-}
 
-.overlay.active {
-  display: flex;
-}
-
-.overlay-container {
-  position: relative;
-  width: 100%;
-
-}
-
-
-.close {
-  font: 16px Helvetica, sans-serif;
-  color: #fff;
-  position: absolute;
-  right: 5px;
-  top: 10px;
-  background: transparent;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  text-align: center;
-  text-decoration: none;
-}
