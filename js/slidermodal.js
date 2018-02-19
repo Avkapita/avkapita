@@ -11,10 +11,10 @@ ingredients.addEventListener("click", function(e) {
     
     if (!e.target.classList.contains("ingr-title")) { 
       trigger = e.target;
-      console.log(trigger);
+      //console.log(trigger);
     } else { 
       trigger = e.target.parentNode;
-      console.log(trigger);
+     // console.log(trigger);
     }
     
     var ingrModal = trigger.nextElementSibling;  
