@@ -1,6 +1,6 @@
-const openButton = document.querySelector("#hamburger-menu");
+const openMenuButton = document.querySelector("#hamburger-menu");
 
-openButton.addEventListener("click", function() {
+openMenuButton.addEventListener("click", function() {
 
   const overlayElement = document.querySelector(".overlay");
   overlayElement.style.display = "flex";

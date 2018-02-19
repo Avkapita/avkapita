@@ -9,7 +9,8 @@ var start = 1;
 leftArrow.addEventListener('click', function (e) {
     e.preventDefault();
     var currentLeft = (parseInt(getComputedStyle(sliderList).left));
- 
+  
+  console.log(currentLeft, start);
     if (start > 1 && currentLeft % size == 0) {        
       sliderList.style.left = currentLeft + size + 'px';
       start--;      
@@ -78,48 +79,7 @@ for (var i = 0; i < coords.length; i++) {
 myMap.geoObjects.add(myCollection);
 }
 
-
-/////Menu-vertical-accordeon
-/*
-var accordion = document.getElementById("menu-accordion"),
-    items = accordion.getElementsByClassName("acc-menu__item"),
-    contents = accordion.getElementsByClassName("acc-menu__content"),
-
-     i;
-
-accordion.addEventListener('click', function(e) {
-  if (e.target.classList.contains("acc-menu__trigger" || 
-    e.target.classList.contains("acc-menu__tr-text")) ) {
-    var trigger = e.target;
-    var content = trigger.nextElementSibling;
-    var item = trigger.parentNode;
-
-
-
-    if (!item.classList.contains("active")) { // не активный
-      // удаляем active для всех li
-      for (i = 0; i < items.length; i++) {
-        items[i].classList.remove("active");
-      }
-      // добавляем active для текущего li
-      item.classList.add("active");
-
-      // закрываем все блоки с контентом
-      for (i = 0; i < contents.length; i++) {
-        contents[i].style.offsetWidth = null;
-      }
-      // открываем текущий блок с контентом
-      content.style.offsetWidth = content.offsetWidth + "px";
-      
-    } else { // активный
-      // удаляем класс active для текущего li
-      item.classList.remove("active");
-      
-      // закрываем текущий блок с контентом
-      content.style.offsetWidth = null;
-    }
-  }
-});*/
+//// MENU - ACCORDEON
 
 
 var accordion = document.getElementById("menu-accordion");
@@ -172,18 +132,6 @@ accordion.addEventListener("click", function(e) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // Team - horizontal - accordeon
 var accordion2 = document.getElementById("team-accordion"),
     items2 = accordion2.getElementsByClassName("team-acc__item"),
@@ -222,9 +170,40 @@ accordion2.addEventListener("click", function(e) {
 });
 
 
+//REVIEWS - MODAL
+/*
+
+const openReviewButton = document.querySelector("#openReviewButton");
+
+function openOverlay(content) {
+  const overlayElement = document.createElement("div");
+  overlayElement.classList.add("overlay");
+
+  const template = document.querySelector("#overlayTemplate");
+  overlayElement.innerHTML = template.innerHTML; 
+
+  const closeElement = overlayElement.querySelector(".close");
+  closeElement.addEventListener("click", function() {
+    document.body.removeChild(overlayElement);
+  });
+
+  const contentElement = overlayElement.querySelector(".content");
+  contentElement.innerHTML = content;
+
+  return overlayElement;
+}
+
+const successOverlay = openOverlay("Привет, <b>loftschool</b>!");
+
+openButton.addEventListener("click", function() {
+  document.body.appendChild(successOverlay);
+});
 
 
 
+
+
+/*
 //Order - Form - modal
 
 var formOverlay = document.getElementById('form-overlay');
@@ -238,6 +217,8 @@ submitButton.addEventListener('click', function(e) {
 
          
      }
-);
+);*/
+
+
 
 
