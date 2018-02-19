@@ -44,40 +44,75 @@ window.addEventListener('resize', function() {
 
 
 
- //Contacts-Map
 
 
- ymaps.ready(init);
-    var myMap;
 
-    function init(){     
-        myMap = new ymaps.Map("map", {
-            center: [59.94554327989287,30.38935262114668], 
-            zoom: 11, 
-            controls: []
-        });
 
-myMap.behaviors.disable('scrollZoom');
 
-    var coords = [
-    [59.94554327989287,30.38935262114668], 
-    [59.91142323563909,30.50024587065841], 
-    [59.88693161784606,30.319658102103713],
-    [59.97033574821672,30.315194906302924]
-],
-    myCollection = new ymaps.GeoObjectCollection({}, {
-       	iconLayout: 'default#image',
-        iconImageHref: '../img/icons/map-marker.svg',
-        iconImageSize: [46, 57],
-        iconImageOffset: [-26, -52]
-    });
 
-for (var i = 0; i < coords.length; i++) {
-    myCollection.add(new ymaps.Placemark(coords[i]));
-}
+//////REVIEWS
 
-myMap.geoObjects.add(myCollection);
-}
+
+
+
+  
+const openReviewButton = document.querySelector("#openReviewButton");
+
+openReviewButton.addEventListener("click", function() {
+
+//console.log('in function');
+
+  const overlayRevElement = document.querySelector("reviews overlay");
+  overlayRevElement.classList.add("active");
+    
+  const nameElement = document.querySelector("review-over__name");
+  nameElement.textContent = document.querySelector(".reviews__name").textContent;
+
+  const pointsElement = document.querySelector(".points");
+  pointsElement.style.display = "none";
+
+  const closeRevElement = document.querySelector("reviewClose");
+ 
+  closeRevElement.addEventListener("click", function() {
+    overlayRevElement.classList.remove("active");
+  });
+
+  return overlayRevElement;
+});
+
+
+/*
+  const overReviewElement = document.createElement("div");
+  overReviewElement.classList.add("overlay");
+
+  console.log(overlay);
+
+  const template = document.querySelector("#overlayReviewTemplate");
+  overReviewElement.innerHTML = template.innerHTML; 
+
+   console.log(template);
+
+  const closeElement = overReviewElement.querySelector(".close");
+  closeElement.addEventListener("click", function() {
+    document.body.removeChild(overReviewElement);
+
+     console.log(closeElement);
+  });
+
+  const reviewTextElement = overReviewElement.querySelector(".reviewText");
+  document.body.appendChild(overReviewElement);
+
+console.log(reviewTextElement);
+console.log(overReviewElement);
+  return overReviewElement;
+
+  var reviewText = openReviewButton.previousElementSibling;
+  var reviewName = reviewText.previousElementSibling;
+  console.log (reviewText,reviewName);
+*/
+
+
+
 
 //// MENU - ACCORDEON
 
@@ -170,54 +205,45 @@ accordion2.addEventListener("click", function(e) {
 });
 
 
-//REVIEWS - MODAL
-/*
+ //Contacts-Map
 
-const openReviewButton = document.querySelector("#openReviewButton");
 
-function openOverlay(content) {
-  const overlayElement = document.createElement("div");
-  overlayElement.classList.add("overlay");
+ ymaps.ready(init);
+    var myMap;
 
-  const template = document.querySelector("#overlayTemplate");
-  overlayElement.innerHTML = template.innerHTML; 
+    function init(){     
+        myMap = new ymaps.Map("map", {
+            center: [59.94554327989287,30.38935262114668], 
+            zoom: 11, 
+            controls: []
+        });
 
-  const closeElement = overlayElement.querySelector(".close");
-  closeElement.addEventListener("click", function() {
-    document.body.removeChild(overlayElement);
-  });
+myMap.behaviors.disable('scrollZoom');
 
-  const contentElement = overlayElement.querySelector(".content");
-  contentElement.innerHTML = content;
+    var coords = [
+    [59.94554327989287,30.38935262114668], 
+    [59.91142323563909,30.50024587065841], 
+    [59.88693161784606,30.319658102103713],
+    [59.97033574821672,30.315194906302924]
+],
+    myCollection = new ymaps.GeoObjectCollection({}, {
+       	iconLayout: 'default#image',
+        iconImageHref: '../img/icons/map-marker.svg',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-26, -52]
+    });
 
-  return overlayElement;
+for (var i = 0; i < coords.length; i++) {
+    myCollection.add(new ymaps.Placemark(coords[i]));
 }
 
-const successOverlay = openOverlay("Привет, <b>loftschool</b>!");
-
-openButton.addEventListener("click", function() {
-  document.body.appendChild(successOverlay);
-});
+myMap.geoObjects.add(myCollection);
+}
 
 
 
 
-
-/*
-//Order - Form - modal
-
-var formOverlay = document.getElementById('form-overlay');
-
-var submitButton = document.getElementById('form-submit');
-
-submitButton.addEventListener('click', function(e) {
-     (e).preventDefault;
-	  // добавляем active для текущего li
-      formOverlay.classList.add("active");
-
-         
-     }
-);*/
+//FORM
 
 
 

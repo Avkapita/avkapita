@@ -212,10 +212,6 @@ button {
 
 
 .overlay {
-  display: none;
-}
-
-.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -226,9 +222,14 @@ button {
   z-index: 10000;
 }
 
+.overlay.active {
+  display: flex;
+}
+
 .overlay-container {
   position: relative;
   width: 100%;
+
 }
 
 

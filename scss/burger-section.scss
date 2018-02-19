@@ -23,9 +23,6 @@
 	height: 4.6875rem;
 }
 
-.overlay-logo {
-	z-index: 20000;
-}
 
 .nav {
 	display: flex;
@@ -70,6 +67,11 @@
 	padding-right: 0.9375rem;
 }
 
+
+
+.overlay-logo {
+	z-index: 20000;
+}
 
 .overlay-nav-list {
 	display: flex;
